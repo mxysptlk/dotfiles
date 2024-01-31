@@ -5,8 +5,6 @@ call plug#begin()
 " Sensuble defaults
 Plug 'tpope/vim-sensible'
 
-" Code Display
-Plug 'lukas-reineke/indent-blankline.nvim'
 " File browser with git indicators
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
@@ -17,7 +15,6 @@ Plug 'lewis6991/gitsigns.nvim'
 " Colorscheme
 Plug 'xiyaowong/nvim-transparent'
 Plug 'navarasu/onedark.nvim'
-Plug 'jacoborus/tender.vim'
 
 " Telescope file finder / picker
 Plug 'nvim-lua/popup.nvim'
@@ -27,7 +24,6 @@ Plug 'nvim-telescope/telescope.nvim'
 " neovim language things
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'neovim/nvim-lspconfig'
-Plug 'phpactor/phpactor'
 
 " Nicer LSP UI
 Plug 'glepnir/lspsaga.nvim'
@@ -35,11 +31,10 @@ Plug 'echasnovski/mini.nvim', { 'branch': 'stable' }
 call plug#end()
 
 filetype plugin indent on
-colorscheme tender
+colorscheme onedark
 syntax on
-" map leader to space
-nnoremap <SPACE> <Nop>
-let mapleader=" "
+highlight Normal ctermbg=none
+highlight NonText ctermbg=none
 
 " gfiles shortcut
 nnoremap <C-f> <cmd>Telescope find_files<cr>
@@ -69,6 +64,8 @@ set viminfo='25,\"50,n~/.viminfo
 set tw=79
 set autoindent
 set smartindent
+
+set autochdir
 
 " word movement
 imap <S-Left> <Esc>bi
@@ -150,7 +147,6 @@ au TextYankPost * lua vim.highlight.on_yank {higroup="IncSearch", timeout=150, o
 lua << EOF
 -- Setup plugins
 require'gitsigns'.setup{}
-require'ibl'.setup{}
 require'mini.completion'.setup{}
 require'mini.comment'.setup{}
 require'mini.pairs'.setup{}
@@ -162,7 +158,7 @@ require'nvim-tree'.setup{}
 require'transparent'.setup{extra_groups = {"NvimTreeNormal",
     "NvimTreeEndOfBuffer",
     "NvimTreeVertSplit",}}
-
+vim.g.transparent_enabled = true
     -- Nicer LSP UI
 local saga = require 'lspsaga'
 -- Configure language server
@@ -215,8 +211,8 @@ local servers = {
             }
         }}
     },
-    -- bashls = {},
-    html = {}
+    bashls = {},
+    yamlls = {}
 }
 
 for lsp, config in pairs(servers) do
