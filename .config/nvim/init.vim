@@ -147,7 +147,7 @@ au TextYankPost * lua vim.highlight.on_yank {higroup="IncSearch", timeout=150, o
 " Begininline lua
 lua << EOF
 -- Setup plugins
-require'pywal'.setup{}
+--require'pywal'.setup{}
 require'gitsigns'.setup{}
 require'mini.completion'.setup{}
 require'mini.comment'.setup{}
