@@ -1,7 +1,7 @@
-export PATH=$PATH:$HOME/.local/bin:$HOME/.local/share/flatpak/exports/bin/
+export PATH=$HOME/.local/bin:$HOME/.local/share/flatpak/exports/bin/:$PATH
 export EDITOR=/usr/bin/nvim
-
-if [[ $(uname -s) == *BSD ]]
+OS=$(uname -s)
+if [[ "$OS" == *BSD ]]
 then
     source /usr/local/share/zsh-antigen/antigen.zsh
 else
@@ -11,7 +11,7 @@ fi
 antigen use oh-my-zsh
 antigen bundle git
 antigen bundle pip
-if [[ $(uname -s) == *BSD ]]
+if [[ "$OS" == *BSD ]]
 then
     antigen bundle Senderman/doas-zsh-plugin
 else
