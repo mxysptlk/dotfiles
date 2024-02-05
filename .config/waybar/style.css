@@ -6,8 +6,8 @@
 }
 
 window#waybar {
-    background-color: rgba(43, 48, 59, 0.5);
-    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
+    background-color: rgba(0, 0, 0, 0.2);
+    border-bottom: 0px solid rgba(100, 114, 125, 0.5);
     color: @color7;
     transition-property: background-color;
     transition-duration: .5s;
@@ -89,7 +89,11 @@ button:hover {
 #idle_inhibitor,
 #scratchpad,
 #mpd {
-    padding: 0 10px;
+    border-radius: 15px;
+    padding: 2px 10px 0px 10px;
+    margin: 5px 15px 5px 0px;
+    opacity:0.8;
+
     background-color: transparent;
     color: @color7;
 }
@@ -117,8 +121,10 @@ button:hover {
 }
 
 #battery.charging, #battery.plugged {
-    color: @color7;
+    color: #ffffff;
     background-color: #26A65B;
+    border-radius: 15px;
+    opacity: 0.8;
 }
 
 @keyframes blink {
@@ -130,7 +136,8 @@ button:hover {
 
 #battery.critical:not(.charging) {
     background-color: #f53c3c;
-    color: @color7;
+    border-radius: 15px;
+    color: #ffffff;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -191,6 +198,7 @@ label:focus {
 }
 
 #idle_inhibitor {
+    font-size: 13px;
 }
 
 #idle_inhibitor.activated {
@@ -203,3 +211,14 @@ label:focus {
 #scratchpad.empty {
 	background-color: transparent;
 }
+tooltip {
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding:20px;
+    margin:0px;
+}
+
+tooltip label {
+    color: @color7;
+}
+

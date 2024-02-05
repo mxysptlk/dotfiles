@@ -15,6 +15,7 @@ Plug 'lewis6991/gitsigns.nvim'
 " Colorscheme
 Plug 'xiyaowong/nvim-transparent'
 Plug 'navarasu/onedark.nvim'
+Plug 'AlphaTechnolog/pywal.nvim', { 'as': 'pywal' }
 
 " Telescope file finder / picker
 Plug 'nvim-lua/popup.nvim'
@@ -146,6 +147,7 @@ au TextYankPost * lua vim.highlight.on_yank {higroup="IncSearch", timeout=150, o
 " Begininline lua
 lua << EOF
 -- Setup plugins
+require'pywal'.setup{}
 require'gitsigns'.setup{}
 require'mini.completion'.setup{}
 require'mini.comment'.setup{}
