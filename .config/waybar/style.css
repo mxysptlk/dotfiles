@@ -8,7 +8,7 @@
 window#waybar {
     background-color: rgba(0, 0, 0, 0.2);
     border-bottom: 0px solid rgba(100, 114, 125, 0.5);
-    color: @color7;
+    color: #c5c8c6;
     transition-property: background-color;
     transition-duration: .5s;
 }
@@ -22,7 +22,7 @@ window#waybar.empty {
     background-color: transparent;
 }
 window#waybar.solo {
-    background-color: @color7;
+    background-color: #c5c8c6;
 }
 */
 
@@ -46,13 +46,13 @@ button {
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
     background: inherit;
-    box-shadow: inset 0 -3px @color7;
+    box-shadow: inset 0 -3px #c5c8c6;
 }
 
 #workspaces button {
     padding: 0 5px;
     background-color: transparent;
-    color: @color7;
+    color: #c5c8c6;
 }
 
 #workspaces button:hover {
@@ -61,7 +61,7 @@ button:hover {
 
 #workspaces button.focused {
     background-color: #64727D;
-    box-shadow: inset 0 -3px @color7;
+    box-shadow: inset 0 -3px #c5c8c6;
 }
 
 #workspaces button.urgent {
@@ -70,7 +70,7 @@ button:hover {
 
 #mode {
     background-color: #64727D;
-    border-bottom: 3px solid @color7;
+    border-bottom: 3px solid #c5c8c6;
 }
 
 #clock,
@@ -95,7 +95,7 @@ button:hover {
     opacity:0.8;
 
     background-color: transparent;
-    color: @color7;
+    color: #c5c8c6;
 }
 
 #window,
@@ -129,7 +129,7 @@ button:hover {
 
 @keyframes blink {
     to {
-        background-color: @color7;
+        background-color: #c5c8c6;
         color: #000000;
     }
 }
@@ -219,6 +219,6 @@ tooltip {
 }
 
 tooltip label {
-    color: @color7;
+    color: #c5c8c6;
 }
 
