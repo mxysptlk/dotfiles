@@ -1,4 +1,4 @@
-export PATH=$HOME/.local/bin:$HOME/.local/share/flatpak/exports/bin/:$PATH
+export PATH=$HOME/.local/bin:$PATH
 export EDITOR=/usr/bin/nvim
 OS=$(uname -s)
 if [[ "$OS" == *BSD ]]
