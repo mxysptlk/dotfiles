@@ -115,7 +115,7 @@ nmap <leader>x :bd<CR>
 " restore place in file from previous session
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 " quit if NvimTree is the last open buffer
-autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif
+" autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif
 " copy, cut and paste
 vmap <C-c> "+y
 vmap <C-x> "+c
@@ -213,6 +213,7 @@ local servers = {
             }
         }}
     },
+    clangd = {},
     bashls = {},
     yamlls = {}
 }
