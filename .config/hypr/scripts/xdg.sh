@@ -11,12 +11,7 @@ killall xdg-desktop-portal-hyprland
 killall xdg-desktop-portal-wlr
 killall xdg-desktop-portal
 
-if [ -f $PREFIX/xdg-desktop-portal-hyprland ]
-then
-    $PREFIX/xdg-desktop-portal-hyprland &
-else
-    $PREFIX/xdg-desktop-portal-wlr &
-fi
+$PREFIX/xdg-desktop-portal-hyprland &
 
 sleep 2
 $PREFIX/xdg-desktop-portal &
