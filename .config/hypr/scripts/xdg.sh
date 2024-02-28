@@ -1,7 +1,8 @@
 #! /bin/sh
-if [ $(uname -s) = Linux ]
+if [ "$(uname -s)" = Linux ]
 then
     PREFIX=/usr/libexec
+    exit
 else
     PREFIX=/usr/local/libexec
 fi
