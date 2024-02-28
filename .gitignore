@@ -21,6 +21,10 @@ dotfiles
 .zshrc-old
 .zshrc.new
 .zshrc.zwc
+.Xauthority
+.antigen
+.cache
+.codeblocks
 Desktop
 Downloads
 Nextcloud
